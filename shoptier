@@ -1,3 +1,6 @@
+-- not mine
+-- https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/CustomModules/6872274481.vape
+
 bedwars = {
 	["AnimationUtil"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out["shared"].util["animation-util"]).AnimationUtil,
 	["AngelUtil"] = require(repstorage.TS.games.bedwars.kit.kits.angel["angel-kit"]),
@@ -107,14 +110,3 @@ bedwars = {
 	["Shop"] = require(repstorage.TS.games.bedwars.shop["bedwars-shop"]).BedwarsShop,
 	["ShopItems"] = debug.getupvalue(require(repstorage.TS.games.bedwars.shop["bedwars-shop"]).BedwarsShop.getShopItem, 2),
 }
-
-local tiered = {}
-	local nexttier = {}
-	for i,v in pairs(bedwars["ShopItems"]) do
-		if v["tiered"] then
-			tiered[v.itemType] = v["tiered"]
-		end
-		if v["nextTier"] then
-			nexttier[v.itemType] = v["nextTier"]
-		end
-	end
